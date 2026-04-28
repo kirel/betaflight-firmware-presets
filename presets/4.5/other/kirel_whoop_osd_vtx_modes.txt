@@ -1,15 +1,13 @@
-#$ TITLE: Kirel Whoop OSD, VTX and Radio Modes
+#$ TITLE: Kirel Whoop OSD, Raceband 8 and Radio Modes
 #$ FIRMWARE_VERSION: 4.5
 #$ CATEGORY: OTHER
 #$ STATUS: COMMUNITY
 #$ KEYWORDS: kirel, whoop, betafpv, air65, air75, osd, vtx, modes
 #$ AUTHOR: kirel
 #$ DESCRIPTION: Personal whoop preset based on the Air65 F Betaflight 4.5 diff.
-#$ DESCRIPTION: Intended to apply the same OSD layout, VTX table/channel/power and AUX/radio switch setup to BetaFPV Air65/Air75 style whoops.
+#$ DESCRIPTION: Intended to apply the same OSD layout, default VTX channel Raceband 8, and AUX/radio switch setup to BetaFPV Air65/Air75 style whoops.
 #$ DESCRIPTION: Does not change PID tune, filters, rates, motor protocol, accelerometer calibration, craft name, or other model-specific flight settings.
-#$ WARNING: This preset changes AUX/radio switch assignments and VTX table/channel/power/frequency. Verify your radio switches before arming and ensure the selected VTX settings are legal in your region.
-#$ DISCLAIMER: Sets VTX table and VTX channel/power/frequency from the Air65 F diff.
-#$ INCLUDE_DISCLAIMER: misc/disclaimer/en/vtxtable.txt
+#$ WARNING: This preset changes AUX/radio switch assignments and sets the default VTX channel to Raceband 8 / 5917 MHz. Verify your radio switches before arming and ensure the selected VTX channel is legal in your region.
 #$ DISCUSSION: https://github.com/kirel/betaflight-firmware-presets
 
 # feature
@@ -25,19 +23,6 @@ aux 1 1 2 1300 1700 0 0
 aux 2 13 3 1300 2100 0 0
 aux 3 35 2 1700 2100 0 0
 aux 4 36 1 1700 2100 0 0
-
-# vtxtable from Air65 F
-vtxtable bands 6
-vtxtable channels 8
-vtxtable band 1 BOSCAM_A A FACTORY 5865 5845 5825 5805 5785 5765 5745 5725
-vtxtable band 2 BOSCAM_B B FACTORY 5733 5752 5771 5790 5809 5828 5847 5866
-vtxtable band 3 BOSCAM_E E FACTORY 5705 5685 5665 5645 5885 5905 5925 5945
-vtxtable band 4 FATSHARK F FACTORY 5740 5760 5780 5800 5820 5840 5860 5880
-vtxtable band 5 RACEBAND R FACTORY 5658 5695 5732 5769 5806 5843 5880 5917
-vtxtable band 6 LOWRACE  L FACTORY 5362 5399 5436 5473 5510 5547 5584 5621
-vtxtable powerlevels 5
-vtxtable powervalues 1 2 3 4 0
-vtxtable powerlabels 25 100 200 400 PIT
 
 # OSD layout/settings from Air65 F
 set osd_rssi_dbm_alarm = -99
@@ -69,10 +54,7 @@ set osd_displayport_device = AUTO
 set osd_canvas_width = 30
 set osd_canvas_height = 13
 
-# VTX selection from Air65 F
-set debug_mode = GYRO_SCALED
+# Default VTX channel: Raceband 8 / 5917 MHz
 set vtx_band = 5
 set vtx_channel = 8
-set vtx_power = 3
 set vtx_freq = 5917
-set vcd_video_system = AUTO

@@ -156,8 +156,8 @@
   "presets": [
     {
       "fullPath": "presets/4.5/other/kirel_whoop_osd_vtx_modes.txt",
-      "hash": "26ab9f346be38ffd5e0dee3735b0366b529106f4cdef4a1ad893e50c6ebbacac",
-      "title": "Kirel Whoop OSD, VTX and Radio Modes",
+      "hash": "4e01fea340a8528f27d60ea063d1a3df63f1f47accc254852fe64dc93053a95f",
+      "title": "Kirel Whoop OSD, Raceband 8 and Radio Modes",
       "firmware_version": [
         "4.5"
       ],
